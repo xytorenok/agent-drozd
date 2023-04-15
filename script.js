@@ -90,9 +90,9 @@ let isAlive = setInterval(function () {
       failed.hidden = false
       daysClean = -1;
       // отключение перезагрузки при проигрыше
-      // setTimeout(function() {
-      //   location.reload();
-      // }, 3000);
+      setTimeout(function() {
+        location.reload();
+      }, 3000);
     }
 
     // добавляем паузу в 1 секунду, чтобы счетчик не увеличивался слишком быстро
