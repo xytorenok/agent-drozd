@@ -28,8 +28,9 @@
 #startgame {
   margin-top: 20px;
   width: 100%;
-  padding: 90px 0;
-  background: url(img/skyv.png);
+  height: 40%;
+  background: url(img/skyv.png) no-repeat center;
+  background-size: cover;
 }
 
 #main{
