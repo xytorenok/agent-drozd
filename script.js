@@ -24,6 +24,10 @@ const renderHeight = window.innerHeight - 100;
 
 createHeight()
 
+function createHeight(){
+  container.style.height = `${renderHeight}px`
+}
+
 let lives = 2;
 let daysClean = 0;
 
@@ -125,6 +129,4 @@ let rocketLeft = parseInt(window.getComputedStyle(rocket).getPropertyValue('left
 
 
 
-function createHeight(){
-  container.style.height = `${renderHeight}px`
-}
+
