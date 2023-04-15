@@ -20,14 +20,6 @@ const btnStartGame = document.getElementById('startgame');
 const btnJump = document.getElementById('btnjump');
 
 
-const renderHeight = window.innerHeight - 100;
-
-createHeight()
-
-function createHeight(){
-  container.style.height = `${renderHeight}px`
-}
-
 let lives = 2;
 let daysClean = 0;
 
