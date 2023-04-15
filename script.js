@@ -87,6 +87,7 @@ let isAlive = setInterval(function () {
       lives = 2;
       failed.hidden = false
       daysClean = -1;
+      // отключение перезагрузки при проигрыше
       setTimeout(function() {
         location.reload();
       }, 3000);

@@ -2,12 +2,23 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .container {
   max-width: 600px;
   margin: 0 auto;
 }
 
 #header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 98vh;
+}
+
+#header p{
   margin-top: 50px;
   line-height: 1.5;
   text-align: center;
@@ -18,6 +29,13 @@
   width: 100%;
   padding: 90px 0;
   background: url(img/skyv.png);
+}
+
+#main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 98vh;
 }
 
 #game {
@@ -56,8 +74,10 @@
 
 #btnjump {
   width: 100%;
+  height: 400px;
   padding: 90px 0;
   background: url(img/skyv.png);
+  background-size: cover;
 }
 
 .background {
