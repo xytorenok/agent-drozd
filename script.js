@@ -1,3 +1,4 @@
+const container = document.getElementById('container');
 const header = document.getElementById('header');
 const main = document.getElementById('main');
 const game = document.getElementById('game');
@@ -17,6 +18,11 @@ const bayraktar = document.getElementById('bayraktar');
 const btnStartGame = document.getElementById('startgame');
 
 const btnJump = document.getElementById('btnjump');
+
+
+const renderHeight = window.innerHeight - 100;
+
+createHeight()
 
 let lives = 2;
 let daysClean = 0;
@@ -88,9 +94,9 @@ let isAlive = setInterval(function () {
       failed.hidden = false
       daysClean = -1;
       // отключение перезагрузки при проигрыше
-      setTimeout(function() {
-        location.reload();
-      }, 3000);
+      // setTimeout(function() {
+      //   location.reload();
+      // }, 3000);
     }
 
     // добавляем паузу в 1 секунду, чтобы счетчик не увеличивался слишком быстро
@@ -118,3 +124,7 @@ let rocketLeft = parseInt(window.getComputedStyle(rocket).getPropertyValue('left
 }, 100);
 
 
+
+function createHeight(){
+  container.style.height = `${renderHeight}px`
+}
