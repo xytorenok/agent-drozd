@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dino Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header id="header">
+      <p class="">Агент Drozd, находится на пляже для обнаружения крейсера Москва и его уничтожения. Cпецслужбы РФ не смогли обнаружить агента, и решили каждый час накуривать всех на пляже, чтобы саботировать миссию агента. Помоги агенту быть в сознании и не завалить задание, ведь его толлер сможет выдержать всего 2 напаса. Т.к. агент Drozd потерял средства связи, то для передачи координат для БПЛА уйдет около 8 часов, и еще около 10 на то чтобы дать команду отработать по цели.  </p>
+      <button id="startgame">нажать чтобы начать</button>
+
+    </header>
+    
+
+    <main id="main" hidden>
+    <div id="game">
+      <div id="sky" class="background"></div>
+      <div id="water" class="background"></div>
+      <div id="dust" class="background"></div>
+      <div id="birds_right"></div>
+      <div id="bird"></div>
+      <div id="bayraktar"></div>
+      <div id="cruiser"></div>
+      <div id="rocket"></div>
+      <div id="sun"></div>
+      <div id="dino"></div>
+      <div id="cactus"></div>
+      <div id="failed" hidden></div>
+    </div>
+    <div id="info">
+      <p>Толерантность:<span id="life"></span></p>
+      <p>Не хапанул <span id="distance"></span></p>
+    </div>
+<button id="btnjump">jump</button>
+  </div>
+</main>
+  <script src="script.js"></script>
+</body>
+
+</html>
