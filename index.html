@@ -9,45 +9,53 @@
   <link rel="stylesheet" href="style.css" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-<link rel="manifest" href="img/favicon/site.webmanifest">
-<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" id="container">
     <header id="header">
-      <p class="">Агент Drozd, находится на пляже для обнаружения крейсера Москва и его уничтожения. Cпецслужбы РФ не смогли обнаружить агента, и решили каждый час накуривать всех на пляже, чтобы саботировать миссию агента. Помоги агенту быть в сознании и не завалить задание, ведь его толлер сможет выдержать всего 2 напаса. Т.к. агент Drozd потерял средства связи, то для передачи координат для БПЛА уйдет около 8 часов, и еще около 10 на то чтобы дать команду отработать по цели.  </p>
-      <button id="startgame">нажать чтобы начать</button>
+      <p class="">Агент Drozd, находится на пляже для обнаружения крейсера Москва и его уничтожения. Cпецслужбы РФ не
+        смогли обнаружить агента, и решили каждый час накуривать всех на пляже, чтобы саботировать миссию агента. Помоги
+        агенту быть в сознании и не завалить задание, ведь его толлер сможет выдержать всего 2 напаса. Т.к. агент Drozd
+        потерял средства связи, то для передачи координат для БПЛА уйдет около 8 часов, и еще около 10 на то чтобы дать
+        команду отработать по цели. </p>
+      <!-- <button id="startgame">нажать чтобы начать</button> -->
+      <div id="instruction"></div>
+
+
 
     </header>
-    
+
 
     <main id="main" hidden>
-    <div id="game">
-      <div id="sky" class="background"></div>
-      <div id="water" class="background"></div>
-      <div id="dust" class="background"></div>
-      <div id="birds_right"></div>
-      <div id="bird"></div>
-      <div id="bayraktar"></div>
-      <div id="cruiser"></div>
-      <div id="rocket"></div>
-      <div id="sun"></div>
-      <div id="dino"></div>
-      <div id="cactus"></div>
-      <div id="failed" hidden></div>
-    </div>
-    <div id="info">
-      <p>Толерантность:<span id="life"></span></p>
-      <p>Не хапанул <span id="distance"></span></p>
-    </div>
-<button id="btnjump">jump</button>
+      <div id="game">
+        <div id="sky" class="background"></div>
+        <div id="water" class="background"></div>
+        <div id="dust" class="background"></div>
+        <div id="birds_right"></div>
+        <div id="bird"></div>
+        <div id="bayraktar"></div>
+        <div id="cruiser"></div>
+        <div id="rocket"></div>
+        <div id="sun"></div>
+        <div id="dino"></div>
+        <div id="cactus"></div>
+        <div id="failed" hidden></div>
+      </div>
+      <div id="info">
+        <p>Толерантность:<span id="life"></span></p>
+        <p>Не хапанул <span id="distance"></span></p>
+      </div>
+      <div id="tap"></div>
+      <!-- <button id="btnjump">jump</button> -->
   </div>
-</main>
+  </main>
   <script src="script.js"></script>
 </body>
 

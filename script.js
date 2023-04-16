@@ -3,7 +3,7 @@ const header = document.getElementById('header');
 const main = document.getElementById('main');
 const game = document.getElementById('game');
 const failed = document.getElementById('failed');
-
+const tap = document.getElementById('tap');
 
 
 
@@ -23,17 +23,55 @@ const btnJump = document.getElementById('btnjump');
 let lives = 2;
 let daysClean = 0;
 
-btnStartGame.onclick = startGame
+let firstmenu = true
+
+// btnStartGame.onclick = startGame
+
+tap.onclick = jump();
 
 function startGame(){
   main.hidden = false
   header.hidden = true
 }
 
-btnJump.onclick = jump
+function tapStart() {
+  tap.style.background ='url(img/tap.png) no-repeat,url(img/tapbang.png) no-repeat'
+  tap.style.backgroundSize = '100%'
+  tap.style.backgroundPosition = 'center 4px';
+}
+
+function tapEnd() {
+  tap.style.background ='url(img/tap.png) no-repeat'
+  tap.style.backgroundSize = '100%'
+  tap.style.backgroundPosition = 'center 2px'; // возвращаем исходную позицию фонового изображения при отпускании
+}
+
+document.addEventListener('touchstart', function(event) {
+  if (event.touches.length === 1) {
+    firstmenu = false 
+    jump();
+    tapStart()
+    }
+});
+
+
+
+document.addEventListener('touchend', function() {
+  if (!firstmenu) startGame()
+  tapEnd()
+});
+
+
+// btnJump.onclick = jump
 
 document.addEventListener('keydown', function (event) {
   jump();
+  startGame()
+  tapStart()
+});
+
+document.addEventListener('keyup', function (event) {
+  tapEnd()
 });
 
 function jump() {
