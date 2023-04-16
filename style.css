@@ -190,6 +190,21 @@
   animation: cruiserMov 10000ms linear;
 }
 
+#bang {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url(./img/bang.png);
+  background-size: 100px 100px;
+  bottom: 75px;
+  left: 150px;
+  z-index: 5;
+  transform: translate(-50%);
+  opacity: 0;
+  /* animation: bang-bang 2000ms linear; */
+}
+
+
 #rocket {
   position: absolute;
   width: 70px;
@@ -242,6 +257,62 @@
 
   100% {
     left: -40px;
+  }
+}
+
+@keyframes cruiseDying {
+  0% {
+    left: 160px;
+    opacity: 1;
+  }
+
+  25% {
+    left: 130px;
+  }
+
+  50% {
+    left: 160px;
+  }
+
+  75% {
+    left: 130px;
+  }
+
+  100% {
+    bottom: 70px;
+    opacity: 0;
+  }
+}
+
+@keyframes bang-bang {
+  0% {
+    left: 160px;
+    
+  }
+
+  25% {
+    left: 130px;
+    opacity: 1;
+    scale: 1.1;
+  }
+
+  50% {
+    left: 160px;
+    opacity: 0;
+    scale: 1;
+  }
+
+  75% {
+    left: 130px;
+    opacity: 1;
+    scale: 1.1;
+  }
+
+  100% {
+    bottom: 30px;
+    opacity: 0;
+    opacity: 0;
+    scale: 1;
   }
 }
 

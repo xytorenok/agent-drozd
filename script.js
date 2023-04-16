@@ -14,6 +14,7 @@ const life = document.getElementById('life');
 const distancePoint = document.getElementById('distance');
 const cruiser = document.getElementById('cruiser');
 const rocket = document.getElementById('rocket');
+const bang = document.getElementById('bang');
 const bayraktar = document.getElementById('bayraktar');
 const btnStartGame = document.getElementById('startgame');
 
@@ -82,13 +83,13 @@ function jump() {
     dino.classList.remove('jump');
   }, 600);
 
-  if (daysClean == 17) {
+  if (daysClean == 3) {
     // убирает ракету после "попадания"
     rocket.style.left = '150px'
     rocket.style.animation = 'rocket 2000ms linear';
   }
 
-  if (daysClean == 7) {
+  if (daysClean == 1) {
     bayraktar.style.left = '-50px'
     bayraktar.style.animation = 'bayraktarMov 8000ms linear';
   }
@@ -149,8 +150,11 @@ let rocketLeft = parseInt(window.getComputedStyle(rocket).getPropertyValue('left
   if (rocketLeft == cruiserLeft) {
     lives = 666;
     cruiser.style.opacity = '0';
-    cruiser.style.left = '140px'
-    cruiser.style.transition= 'all 1s linear';
+    cruiser.style.transition = 'all 1000ms linear';
+    cruiser.style.animation = 'cruiseDying 1000ms linear'
+
+    bang.style.animation = 'bang-bang 1000ms linear'
+    
     rocket.style.opacity = '0';
     rocket.style.transition= 'all 1s linear';
   }
