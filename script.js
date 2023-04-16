@@ -83,13 +83,13 @@ function jump() {
     dino.classList.remove('jump');
   }, 600);
 
-  if (daysClean == 3) {
+  if (daysClean == 17) {
     // убирает ракету после "попадания"
     rocket.style.left = '150px'
     rocket.style.animation = 'rocket 2000ms linear';
   }
 
-  if (daysClean == 1) {
+  if (daysClean == 7) {
     bayraktar.style.left = '-50px'
     bayraktar.style.animation = 'bayraktarMov 8000ms linear';
   }
